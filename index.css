@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap");
+body {
+  margin: 0;
+}
+.contaener {
+  max-width: 1474px;
+}
+header {
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px;
+  background-color: #b5d7cf;
+  height: 100px;
+  list-style-type: none;
+}
+header ul {
+  position: absolute;
+  margin-top: -80px;
+  font-family: Lobster;
+  padding-top: 30px;
+  left: 320px;
+  /*выстраеивает блочные элементы в строку*/
+}
+header ul li {
+  color: black;
+  cursor: pointer;
+  margin-left: 70px;
+  font-size: calc(7px + 22 * (100vw / 1457));
+  display: inline-block; /*выстраеивает блочные элементы в строку*/
+}
+header ul li a {
+  color: black;
+  text-decoration: none;
+}
+header ul li:hover {
+  color: #9b1212;
+  animation: Menu 2s ease infinite;
+  border-block-start: solid;
+  writing-mode: horizontal-tb;
+  animation: Menu 3s ease infinite;
+  border-block-end: solid;
+  writing-mode: horizontal-tb;
+}
+
+@keyframes Menu {
+  0% {
+    border-radius: 0px;
+  }
+  70% {
+    /* box-shadow:5px 5px 5px #ee0909; */
+    border-radius: 8px;
+  }
+  90% {
+    border-radius: 0;
+  }
+}
+@keyframes text_excerpt {
+  0% {
+    text-shadow: 0px 0px 0px #00000000;
+  }
+  10% {
+    text-shadow: 2px 2px 3px #000000;
+  }
+  50% {
+    text-shadow: 10px 10px 3px #00000099;
+  }
+  80% {
+    text-shadow: 0px 2px 2px #e0e0e0;
+  }
+  100% {
+    text-shadow: 0px 2px 6px #03030300;
+  }
+}
+@keyframes text {
+  0% {
+    text-shadow: 1px 2px 2px #bdd3cc;
+  }
+  50% {
+    text-shadow: 1px 2px 2px rgb(200, 132, 132);
+  }
+  90% {
+    text-shadow: 2px 2px 5px rgb(150, 95, 95);
+  }
+}
+#Menu .Batton {
+  border: 3px solid;
+  position: absolute;
+  top: 430px;
+  left: 110px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.671);
+  padding: 24px;
+}
+#Menu .Batton span {
+  display: block;
+  background-color: #000000;
+  width: 30px;
+  height: 3px;
+  margin: 3px 0;
+}
+#Menu {
+  display: none;
+  animation: shadow 4s ease-out infinite;
+  transition: 1s;
+  left: 160px;
+  z-index: 5;
+  top: -420px;
+  position: fixed;
+  background-color: #2e5f5393;
+  max-width: 100%;
+  height: 410px;
+  border-radius: 50px;
+}
+@keyframes shadow {
+  0% {
+    border-radius: 80px;
+    box-shadow: 4px 4px 4px rgb(162, 88, 88);
+  }
+  50% {
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgb(223, 88, 88);
+  }
+  100% {
+    border-radius: 80px;
+    box-shadow: 4px 4px 4px rgb(88, 175, 142);
+  }
+}
+#Menu.open {
+  left: 160px;
+  top: 20px;
+  position: fixed;
+  background-color: #2e5f5376;
+  max-width: 100%;
+  height: 410px;
+  border-radius: 50px;
+}
+
+#Menu .Menu_text ul li {
+  font-family: Rowdies;
+  margin: 30px;
+  list-style: none;
+}
+#Menu .Menu_text ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+#Menu .Menu_text ul li a:hover {
+  border-radius: 10px;
+  background-color: rgb(178, 73, 73);
+  font-size: 23px;
+}
+.linia {
+  width: 100%;
+  animation: linia 5s ease infinite;
+  z-index: 2;
+  position: fixed;
+  top: 40px;
+}
+.logo {
+  animation: logo 3s ease infinite;
+  object-fit: cover;
+  max-width: 100%;
+  padding-left: 70px;
+  padding-top: 10px;
+}
+@keyframes logo {
+}
+.Part1 {
+  animation: transition 3s ease infinite;
+  background: url(image/backiee-114063.jpg) center / cover no-repeat;
+  height: 800px;
+}
+@keyframes transition {
+  5% {
+    box-shadow: 8px 8px 8px #c9cdcc;
+  }
+  40% {
+    box-shadow: 8px 8px 8px #b5d7cf;
+  }
+  80% {
+    box-shadow: 8px 8px 8px #4dc4a8;
+  }
+}
+.Social {
+  position: absolute;
+  left: 100px;
+  word-spacing: 50px;
+  top: 750px;
+}
+.Social a {
+  transition: 1s;
+}
+.Social a :hover {
+  transform: scale(1.2);
+}
+.twitter {
+  object-fit: cover;
+}
+.tg {
+  object-fit: cover;
+}
+.instagram {
+  object-fit: cover;
+}
+.restaurant {
+  animation: text_excerpt 8s ease infinite;
+  letter-spacing: 5px;
+  text-shadow: 10px 10px 10px black;
+  color: azure;
+  font-family: Lobster;
+  position: absolute;
+  font-size: calc(50px + 90 * (100vw / 1457));
+  left: 75px;
+  top: 280px;
+}
+.restaurant2 {
+  animation: text_excerpt 8s ease infinite;
+  letter-spacing: 7px;
+  text-shadow: 5px 5px 5px black;
+  color: rgb(164, 57, 57);
+  font-family: Lobster;
+  position: absolute;
+  font-size: calc(30px + 60 * (100vw / 1457));
+  left: 230px;
+  top: 440px;
+}
+
+.additionally {
+  cursor: pointer;
+  animation: dot 1s ease infinite;
+  position: absolute;
+  left: 728px;
+  top: 690px;
+  background-color: rgba(198, 187, 165, 0.688);
+  border: 3px solid;
+  border-radius: 20px;
+  padding: 14px;
+}
+.additionally :hover {
+  filter: brightness(25%);
+}
+@keyframes dot {
+  to {
+    padding-top: 20px;
+  }
+  from {
+    padding-top: -20px;
+  }
+}
+#Part2 {
+  text-align: center;
+  /* background-image: url(image/wallpaperbetter.png); */
+  word-spacing: 2px;
+  margin: 30px;
+  font-family: Lobster;
+  font-size: calc(5px + 20 * (100vw / 1457));
+  height: 500px;
+}
+#Part2 span {
+  color: #d20b0b;
+  font-size: 35px;
+}
+#Part2.active {
+  display: none;
+  height: 0px;
+}
+#Part2 img {
+  padding: 10px;
+  border-radius: 50px;
+  max-width: 100%;
+}
+#Part2 img p {
+  text-align: center;
+}
+#Part2 p {
+  padding: 10px;
+  text-align: left;
+}
+.text1 {
+  display: flex;
+}
+.text2 {
+  display: flex;
+}
+
+@media (max-width: 963px) {
+  header ul {
+    left: 190px;
+  }
+  header ul li {
+    margin-left: 40px;
+  }
+  .additionally {
+    left: 462px;
+  }
+  .eat {
+    min-width: 150px;
+  }
+  .eat2 {
+    min-width: 190px;
+  }
+}
+@media (max-width: 629px) {
+  .logo {
+    padding-left: 26px;
+  }
+  #Menu {
+    display: block;
+  }
+  header ul {
+    display: none;
+  }
+  header ul li {
+    font-size: 18px;
+  }
+  header ul li a:hover {
+    font-size: 20px;
+  }
+  .Social {
+    display: flexbox;
+    word-spacing: 5px;
+    left: 4px;
+  }
+  .eat {
+    min-width: 150px;
+  }
+  .eat2 {
+    min-width: 150px;
+  }
+  #Part2 span {
+    color: #d20b0b;
+    font-size: 20px;
+  }
+  .restaurant {
+    left: 30px;
+    top: 260px;
+  }
+  .restaurant2 {
+    left: 100px;
+    top: 350px;
+  }
+  .additionally {
+    left: 160px;
+  }
+  .linia {
+    top: 80px;
+  }
+}
